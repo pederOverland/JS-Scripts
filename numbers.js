@@ -13,7 +13,7 @@
 	//
 	//Depends on: parseNum()
 	outputNum: function(value) {
-		value = parseNum(value).toString();
+		value = NumFormat.parseNum(value).toString();
 		var x = value.split(".");
 		var x1 = x[0];
 		var x2;
