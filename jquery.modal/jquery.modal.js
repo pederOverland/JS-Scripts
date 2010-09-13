@@ -11,13 +11,27 @@
 			$('#modalContent').children().hide().appendTo($('body'));
 		}
 		$('#modalContent').empty().append(elem.show()).parents('#modalWrapper').show();
+        $(document).bind('keydown', function(e){
+            if(e.which == 27){
+                closeDialog();
+            }
+        });
 		$('#modalWrapper').click(function(e) {
-			$('#modalWrapper').hide();
+            closeDialog();
 		});
 		$('#modal').center().click(function(e) {
 			e.stopPropagation();
 		});
         
+        function closeDialog(){
+            $('#modalWrapper').unbind('click').hide();
+        }
+
+        //IE fixes for inline-block:
+        if ($.browser.msie && $.browser.version <= 7.0){
+            $('#modal').css('width', $('#dia').width()+20+'px').center();
+        }
+
 		return this;
 	}
 	$.fn.center = function() {
