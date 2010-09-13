@@ -1,4 +1,4 @@
-﻿var NumFormat = {
+var NumFormat = {
 	parseNum: function(value) {
 		var neg = value.toString().match(/-/);
 		value = value.toString().replace(/[^0-9|,|-|.]/g, "").replace(/,/g, ".");
