@@ -1,0 +1,63 @@
+#rTooltip{
+    display:inline-block;
+    position:absolute;
+}
+.tCorner {
+    width:20px;
+    height:20px;
+    background-image:url(rTooltipImg/tooltipCorners.png);
+    float:left;
+}
+#tCornerTR {
+    background-position: top right;
+}
+#tCornerBL {
+    background-position: bottom left;
+}
+#tCornerTL {
+    background-position: top left;
+}
+#tCornerBR {
+    background-position: bottom right;
+}
+.tBorder{
+    height:20px;
+    float:left;
+}
+#tBorderTop{
+    background:url(rTooltipImg/tooltipBorderTop.png) repeat-x;
+}
+#tBorderBottom{
+    background:url(rTooltipImg/tooltipBorderBottom.png) repeat-x;
+}
+.tVertBorder{
+    width:20px;
+    float:left;
+}
+#tVertBorderLeft{
+    background:url(rTooltipImg/tooltipBorderLeft.png) repeat-y;
+}
+#tVertBorderRight{
+    background:url(rTooltipImg/tooltipBorderRight.png) repeat-y;
+    float:right;
+}
+#tContent{
+    float:left;
+    margin:0;
+    padding:0;
+    background:url(rTooltipImg/tooltipBG.png);
+}
+.row{
+    clear:both;
+}
+.clearfix{
+    display:block;
+    height:0;
+    clear:both;
+}
+#arrow{
+    position:absolute;
+    width:67px;
+    height:67px;
+    background-image:url(rTooltipImg/tooltipArrows.png);
+}
