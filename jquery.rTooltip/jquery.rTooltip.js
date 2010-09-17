@@ -3,7 +3,6 @@
 	var framework = '<div id="rTooltip"><div id="arrow"></div><div class="row"><div id="tCornerTL" class="tCorner"></div><div id="tBorderTop" class="tBorder"></div><div id="tCornerTR" class="tCorner"></div></div><div class="row"><div id="tVertBorderLeft" class="tVertBorder"></div><div id="tContent"></div><div id="tVertBorderRight" class="tVertBorder"></div><div class="clearfix"></div></div><div class="row"><div id="tCornerBL" class="tCorner"></div><div id="tBorderBottom" class="tBorder"></div><div id="tCornerBR" class="tCorner"></div></div></div>';
 	$(document).ready(function() {
 		$('body').append($(framework));
-		console.log($(framework));
 		$('#rTooltip').remove();
 	});
 	//Display element in a modal dialog:
@@ -36,7 +35,6 @@
 				arrow.css('right', 20);
 				tooltip.css('left', ePos.left + (elem.outerWidth() / 2) - (tooltip.outerWidth() - 20));
 			}
-            console.log("reached");
 			pushDiv.width(pushDiv.width() - 67);
 			arrow.css('backgroundPosition', r1 + ' ' + r2);
 			return r1 + ' ' + r2;
@@ -53,7 +51,7 @@
 
 			//IE fixes for inline-block:
 			if ($.browser.msie && $.browser.version <= 7.0) {
-				$('#modal').css('width', $('#dia').width() + 20 + 'px').center();
+				$('#rTooltip').css('width', $('#tContent').width() + 20 + 'px').center();
 			}
 
 		},
