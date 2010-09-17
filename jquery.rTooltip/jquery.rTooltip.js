@@ -49,22 +49,25 @@
 			$('.tVertBorder').height(tContent.height());
 			quadrant();
 
-			//IE fixes for inline-block:
-			if ($.browser.msie && $.browser.version <= 7.0) {
-				$('#rTooltip').css('width', $('#tContent').width() + 20 + 'px').center();
-			}
+            //IE fixes for inline-block:
+            if ($.browser.msie && $.browser.version <= 7.0) {
+                $('#rTooltip').css('display', 'inline');
+                $('#rTooltip').css('width', $('#tContent').outerWidth() + 40);
+                $('#tContent').parent().css('overflow', 'visible');
+            }
 
-		},
-		function() {
-			$('#rTooltip').remove();
-		});
-		return this;
-	}
-	$.fn.center = function() {
-		this.css('position', 'absolute');
-		this.css("top", ($(window).height() - this.height()) / 2 + $(window).scrollTop() + "px");
-		this.css("left", ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px");
-		return this;
-	}
+        },
+        function () {
+            $('body').append($('#tContent').children().hide());
+            $('#rTooltip').remove();
+        });
+        return this;
+    }
+    $.fn.center = function () {
+        this.css('position', 'absolute');
+        this.css("top", ($(window).height() - this.height()) / 2 + $(window).scrollTop() + "px");
+        this.css("left", ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px");
+        return this;
+    }
 })(jQuery);
 
