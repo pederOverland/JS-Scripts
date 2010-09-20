@@ -16,12 +16,13 @@
 			var arrow = $('#arrow');
 			var tooltip = $('#rTooltip');
 			var r1 = (ePos.top <= wHeight / 2) ? "top": "bottom";
+            var pushDiv;
 			if (r1 == "top") {
-				var pushDiv = $('#tBorderTop');
+				pushDiv = $('#tBorderTop');
 				arrow.css('top', - 47);
 				tooltip.css('top', ePos.top + elem.outerHeight()+47);
 			} else {
-				var pushDiv = $('#tBorderBottom');
+				pushDiv = $('#tBorderBottom');
 				arrow.css('bottom', - 47);
 				tooltip.css('top', ePos.top - tooltip.outerHeight()-47);
 			}
